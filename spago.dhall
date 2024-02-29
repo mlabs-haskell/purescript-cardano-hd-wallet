@@ -11,7 +11,15 @@ When creating a new Spago project, you can use
 to generate this file without the comments in this block.
 -}
 { name = "my-project"
-, dependencies = [ "cardano-types", "console", "effect", "prelude", "uint" ]
+, dependencies =
+  [ "cardano-serialization-lib"
+  , "cardano-types"
+  , "console"
+  , "effect"
+  , "either"
+  , "prelude"
+  , "uint"
+  ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
 }

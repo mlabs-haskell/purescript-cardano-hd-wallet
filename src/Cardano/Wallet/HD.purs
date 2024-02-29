@@ -44,8 +44,7 @@ bip32PrivateKeyFromMnemonic = _bip32PrivateKeyFromMnemonic Left Right
 -- | Derive a CIP1852 account from a BIP32 private key given an account index
 cip1852AccountFromBip32PrivateKey :: UInt -> Bip32PrivateKey -> Cip1852Account
 cip1852AccountFromBip32PrivateKey account key =
-  Cip1852Account
-    $ key
+  Cip1852Account $ key
     # derivePrivateKey (UInt.fromInt 1852) true
     # derivePrivateKey (UInt.fromInt 1815) true
     # derivePrivateKey account true
