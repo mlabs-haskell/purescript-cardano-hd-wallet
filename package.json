@@ -1,0 +1,13 @@
+{
+    "type": "module",
+    "scripts": {
+        "test": "spago test"
+    },
+    "dependencies": {
+        "@mlabs-haskell/cardano-serialization-lib-gc": "^1.0.8"
+    },
+    "prettier": {
+        "arrowParens": "avoid",
+        "trailingComma": "none"
+    }
+}
