@@ -5,6 +5,7 @@ module Cardano.Wallet.HD
   , bip32PrivateKeyFromMnemonic
   , cip1852AccountFromBip32PrivateKey
   , cip1852AccountFromMnemonic
+  , deriveDrepKey
   , derivePaymentKey
   , deriveChangeKey
   , deriveStakeKey
@@ -74,4 +75,11 @@ deriveStakeKey :: Cip1852Account -> Bip32PrivateKey
 deriveStakeKey (Cip1852Account key) =
   key
     # derivePrivateKey (UInt.fromInt 2) false
-    # derivePrivateKey (UInt.fromInt 0) false
+    # derivePrivateKey zero false
+
+-- | Derive the DRep (Delegated Representative) key for the given account
+deriveDrepKey :: Cip1852Account -> Bip32PrivateKey
+deriveDrepKey (Cip1852Account key) =
+  key
+    # derivePrivateKey (UInt.fromInt 3) false
+    # derivePrivateKey zero false
