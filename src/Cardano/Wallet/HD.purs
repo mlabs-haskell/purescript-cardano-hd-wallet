@@ -14,7 +14,7 @@ module Cardano.Wallet.HD
 import Prelude
 
 import Data.Either (Either(Left, Right))
-import Cardano.Serialization.Lib (Bip32PrivateKey)
+import Cardano.Data.Lite (Bip32PrivateKey)
 import Cardano.Types.PrivateKey (PrivateKey)
 import Data.UInt (UInt)
 import Data.UInt as UInt

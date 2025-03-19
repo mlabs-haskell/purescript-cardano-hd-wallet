@@ -4,7 +4,7 @@
         "test": "spago test"
     },
     "dependencies": {
-        "@mlabs-haskell/cardano-serialization-lib-gc": "^1.0.8"
+        "@mlabs-haskell/cardano-data-lite": "0.1.0-prerelease8"
     },
     "prettier": {
         "arrowParens": "avoid",

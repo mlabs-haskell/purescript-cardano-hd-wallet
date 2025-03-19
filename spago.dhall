@@ -12,7 +12,7 @@ to generate this file without the comments in this block.
 -}
 { name = "cardano-hd-wallet"
 , dependencies =
-  [ "cardano-serialization-lib"
+  [ "cardano-data-lite"
   , "cardano-types"
   , "console"
   , "effect"
